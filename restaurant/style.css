@@ -49,19 +49,19 @@
   
   .subtext {
     font-style: italic;
-    color: #ddd6d6;
+    color: #0f0404;
   }
   
   .main-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1rem;
     margin: 10px 0;
-    color: #fa2323;
+    color: #0f0404;
   }
   
   .description {
-    font-size: 1.1rem;
-    color: #e8e6e6;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0f0404;
   }
   
   .image-content {
