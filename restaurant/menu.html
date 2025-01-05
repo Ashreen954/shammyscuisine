@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="./menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <!--responsive navbar-->    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo-removebg-preview.png" alt="Logo" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="translate-buttons d-flex align-items-center">
+                <div class="translate-box d-flex align-items-center me-2">
+                    <img src="https://static.parastorage.com/services/linguist-flags/1.969.0/assets/flags/round/USA.png" alt="USA Flag" class="flag-icon">
+                    <button id="englishBtn" class="btn">English</button>
+                </div>
+                <div class="translate-box d-flex align-items-center">
+                    <img src="https://static.parastorage.com/services/linguist-flags/1.969.0/assets/flags/round/FRA.png" alt="French Flag" class="flag-icon">
+                    <button id="frenchBtn" class="btn">Français</button>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <!-- <header>
+        <h1>Our Menu</h1>
+    </header> -->
+    <main>        
+        <!--Apetizers Section-->
+        <section id="appetizers" class="menu-category">
+            <h2>Appetizers</h2>
+            <!-- <h2 class="description-en">Appetizers</h2> -->
+            <!-- <h2 class="description-fr">Entrées</h2> -->
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="./images/menu-images/1.Kachori.png" alt="Kachori" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Kachori</h3>
+                        <p class="description-en">Kachori is a deep-fried pastry filled with spiced lentils stuffing.</p>
+                        <p class="description-fr">Une farce à base de  lentilles dans une boule de farine cuite dans de l’huile</p>
+                        <p class="price">$10.00</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/2.Papdi Chaat.jpg" alt="Papdi Chaat" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Papdi Chaat</h3>
+                        <p class="description-en">Papdi chaat is a popular Indian street food made with crispy fried flour crackers (papdi), topped with a mix of spiced potatoes, chickpeas, yogurt, tangy tamarind chutney, and aromatic spices.</p>
+                        <p class="description-fr">Le papdi chaat est un célèbre snack indien composé de galettes croustillantes frites (papdi), garnies de pommes de terre épicées, pois chiches, yaourt, chutney de tamarin acidulé et d'épices aromatiques.</p>
+                        <p class="price">$6.00</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/3.DahiBhalla.png" alt="Dahi Bhalla" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Dahi Bhalla</h3>
+                        <p class="description-en">Soft lentil dumplings soaked in yogurt, spices, and chutneys.</p>
+                        <p class="description-fr">Boulettes de lentilles moelleuses dans du yaourt, épices et chutneys.</p>
+                        <p class="price">$6.00</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/4.Ram Laddu .png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Ram Laddu</h3>
+                        <p class="description-en">Crispy lentil fritters topped with radish, chutney, and spices.</p>
+                        <p class="description-fr">Beignets de lentilles croustillants garnis de radis et chutneys.</p>
+                        <p class="price">$6.00</p>
+                    </div>
+                </div>
+                 <!-- Card 5 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/5.Idli.png" alt="Kachori" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Idli</h3>
+                        <p class="description-en">Steamed rice cakes served with chutney and flavorful sambar.</p>
+                        <p class="description-fr">Gâteaux de riz vapeur servis avec chutney et sambar savoureux.</p>
+                        <p class="price">$5.00</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/6.Vada.png" alt="Papdi Chaat" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Medu Vada</h3>
+                        <p class="description-en">Crispy lentil donuts with soft centers, paired with chutney.</p>
+                        <p class="description-fr">Beignets de lentilles croustillants, moelleux au centre, avec chutney.</p>
+                        <p class="price">$6.00</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/7.DalVada.png" alt="Dahi Bhalla" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Dal Vada</h3>
+                        <p class="description-en">Crunchy lentil fritters seasoned with spices, perfect tea-time snack.</p>
+                        <p class="description-fr">Beignets de lentilles épicés et croustillants, parfaits pour le thé.</p>
+                        <p class="price">$5.00</p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="menu-card">
+                    <img src="./images/menu-images/8.Kothimbari vadi.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                        <h3>Kothimbari Vadi</h3>
+                        <p class="description-en">Coriander-based savory bites, steamed and fried, spiced to perfection.</p>
+                        <p class="description-fr">Bouchées savoureuses à la coriandre, cuites à la vapeur et frites.</p>
+                        <p class="price">$6.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main Course Section -->
+        <section id="maincourse" class="menu-category">
+            <h2>Plats/Main Course</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="./images/menu-images/9.mutton dum biryani.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Lamb Dum Biryani</h3>
+                    <p class="description-en">Aromatic lamb biryani slow-cooked with spices, herbs, and basmati rice.</p>
+                    <p class="description-fr">Biryani d'agneau parfumé, mijoté avec riz basmati et épices.</p>
+                    <p class="price">$13.9</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/10.ChickenDumBiryani.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Chicken Dum Biryani</h3>
+                    <p class="description-en">Flavorful chicken biryani layered with fragrant rice and spices.</p>
+                    <p class="description-fr">Biryani au poulet épicé et riz basmati délicatement parfumé.</p>
+                    <p class="price">$12.9</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/11.Vegetable DumBiryani.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Vegetable Dum Biryani</h3>
+                    <p class="description-en">Vegetable-loaded biryani with layers of rice, spices, and flavors.</p>
+                    <p class="description-fr">Biryani végétarien avec légumes, riz parfumé et épices.</p>
+                    <p class="price">$11.9</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section id="desserts" class="menu-category">
+            <h2>Desserts</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="./images/menu-images/16.Apricotdelight.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Apricot Delight</h3>
+                    <p class="description-en">Sweet apricot dessert layered with cream, apricots, and rich flavors.</p>
+                    <p class="description-fr">Dessert sucré d'abricots en couches avec crème délicieuse.</p>
+                    <p class="price">$10.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/17.Gulabjamun.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Gulab Jamun</h3>
+                    <p class="description-en">Deep-fried milk dumplings soaked in aromatic sugar syrup.</p>
+                    <p class="description-fr">Boulettes de lait frites trempées dans un sirop aromatisé.</p>
+                    <p class="price">$5.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/18.Gajar Halwa with Rabdi .png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Gajar Halwa with Rabdi</h3>
+                    <p class="description-en">Carrot halwa topped with creamy, thickened milk, rich and delicious.</p>
+                    <p class="description-fr">Halwa de carottes nappé de lait épaissi et crémeux.</p>
+                    <p class="price">$12.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/19.RasMalai.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>RasMalai</h3>
+                    <p class="description-en">Soft paneer dumplings soaked in saffron-infused, sweetened milk.</p>
+                    <p class="description-fr">Boulettes de paneer trempées dans du lait sucré au safran.</p>
+                    <p class="price">$12.00</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverages Section -->
+        <section id="beverages" class="menu-category">
+            <h2>Boissons/Beverages</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="./images/menu-images/Mango Lassi.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Mango Lassi</h3>
+                    <p class="description-en">Creamy yogurt drink blended with ripe mangoes and sugar.</p>
+                    <p class="description-fr">Boisson crémeuse au yaourt mélangée avec mangues mûres et sucre.</p>
+                    <p class="price">$4.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/menu-images/RoseLassi.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Rose Lassi</h3>
+                    <p class="description-en">Sweet yogurt drink infused with refreshing rose syrup flavor.</p>
+                    <p class="description-fr">Boisson sucrée au yaourt infusée de sirop de rose.</p>
+                    <p class="price">$4.00</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snacks Section -->
+        <section id="snacks" class="menu-category">
+            <h2>Snacks</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="./images/menu-images/22.Dryfruit Laddus.png" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>DryFruit Laddus</h3>
+                    <p class="description-en">Nut-packed energy balls made with ghee, nuts, seeds & dry fruits.</p>
+                    <p class="description-fr">Boules énergétiques aux fruits secs, ghee et sucre.</p>
+                    <p class="price">$24.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/apetizer.jpg" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Urad Dal Laddus</h3>
+                    <p class="description-en">Sweet balls of roasted black gram flour and rich flavors.</p>
+                    <p class="description-fr">Boules sucrées de farine de lentilles noires grillées et ghee.</p>
+                    <p class="price">$18.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/apetizer.jpg" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Cookies</h3>
+                    <p class="description-en">Crunchy, baked treats with endless flavors and delightful textures.</p>
+                    <p class="description-fr">Biscuits croustillants aux saveurs variées et textures délicieuses.</p>
+                    <p class="price">$9.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/apetizer.jpg" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Cup Cakes</h3>
+                    <p class="description-en">Mini cakes with frosting, perfect for celebrations and sweet cravings.</p>
+                    <p class="description-fr">Mini-gâteaux glacés, parfaits pour célébrations et envies sucrées.</p>
+                    <p class="price">$9.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/apetizer.jpg" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>Brownies</h3>
+                    <p class="description-en">Fudgy chocolate squares with a rich, decadent, and chewy texture.</p>
+                    <p class="description-fr">Carrés chocolatés fondants, riches, et au goût intense et gourmand.</p>
+                    <p class="price">$12.00</p>
+                </div>
+                </div>
+                <div class="menu-card">
+                    <img src="./images/apetizer.jpg" alt="Ram Laddu" class="menu-image">
+                    <div class="menu-content">
+                    <h3>TeaTime Cakes (Carrot,Banana Walnut, Vanilla, Chocolate)</h3>
+                    <p class="description-en">Light, spongy cakes ideal for enjoying with evening tea.</p>
+                    <p class="description-fr">Gâteaux légers et moelleux parfaits pour accompagner le thé.</p>
+                    <p class="price">$6.00</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row-footer">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="./aboutus.html">about us</a></li>
+                            <li><a href="./contactus.html">contact us</a></li>
+                            <!-- <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="./index.html#faq-section">FAQ</a></li>
+                            <!-- <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61570026141018"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/shammys_cuisine"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copywrite">
+                <p>&copy; 2024 ShammysCuisine. All Rights Reserved.</p>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        const englishBtn = document.getElementById('englishBtn');
+        const frenchBtn = document.getElementById('frenchBtn');
+
+        englishBtn.addEventListener('click', () => {
+            document.querySelectorAll('.description-en').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.description-fr').forEach(el => el.style.display = 'none');
+        });
+
+        frenchBtn.addEventListener('click', () => {
+            document.querySelectorAll('.description-en').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.description-fr').forEach(el => el.style.display = 'block');
+        });
+
+        // Default to English
+        englishBtn.click();
+    </script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restraunt.com</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--responsive navbar-->    
+     <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="./images/logo-removebg-preview.png" alt="Logo" width="150px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto px-5">
+                  <li class="nav-item px-3">
+                      <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item px-3">
+                      <a class="nav-link" href="./menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item px-3">
+                      <a class="nav-link" href="./aboutus.html">About Us</a>
+                  </li>
+                  <li class="nav-item px-3">
+                      <a class="nav-link" href="./contactus.html">Contact Us</a>
+                  </li>
+                  <!-- Language Dropdown -->
+                  <li class="nav-item dropdown px-3">
+                      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                          <li>
+                              <a class="dropdown-item" href="#" onclick="setLanguage('french')">
+                                  <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
+                              </a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" href="#" onclick="setLanguage('english')">
+                                  <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2"> English
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    
+    <!--Header Content  -->
+      <header class="header">   
+        <div class="text-content">
+          <p class="subtext">Are You Hungry?</p>
+          <h1 class="main-heading">Don't Wait - Dive In!</h1>
+          <p class="description">Shammy's Cuisine: Your Destination for Exquisite Flavors</p>
+        </div>
+        <div class="image-content">
+          <!-- <img src="./images/carousel3.jpg" alt="Delicious pizzas" class="circular-image"> -->
+          <img src="./images/menu-images/18.Gajar Halwa with Rabdi .png" alt="Delicious pizzas" class="circular-image">
+        </div>
+        
+      </header>
+
+    <!-- Top dishes -->
+    <div>
+      <h1 style="text-align: center; margin-top: 20px;">Our Signature Dishes</h1>
+      <!-- <h1 style="text-align: center; margin-top: 20px;">Must-Try Delicacies</h1> -->
+      <div class="dishes-container">
+        <div class="dish">
+          <img src="./images/menu-images/1.Kachori.png" alt="Kachori">
+          <h3>Kachori</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/4.Ram Laddu .png" alt="Ram Laddu">
+          <h3>Ram Laddu</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/7.DalVada.png" alt="Dal Vada">
+          <h3>Dal Vada</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/10.ChickenDumBiryani.png" alt="Chicken Dum Biryani">
+          <h3>Chicken Dum Biryani</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/13.Lamb Curry.png" alt="Chicken/Lamb Curry">
+          <h3>Chicken/Lamb Curry</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/18.Gajar Halwa with Rabdi .png" alt="Gajar Halwa with Rabdi">
+          <h3>Gajar Halwa with Rabdi</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/19.RasMalai.png" alt="RasMalai">
+          <h3>RasMalai</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/22.Dryfruit Laddus.png" alt="DryFruit Laddus">
+          <h3>DryFruit Laddus</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/13.Lamb Curry.png" alt="Cookies">
+          <h3>Cookies</h3>
+        </div>
+        <div class="dish">
+          <img src="./images/menu-images/16.Apricotdelight.png" alt="Tea Time Cakes">
+          <h3>Tea Time Cakes</h3>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <h1 id="sub-heading">Discover the Taste of Excellence!</h1>
+
+
+    <!-- Menu cards -->
+    <div class="container">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="./images/menu-images/1.Kachori.png" alt="Appetizers">
+        <div class="card-body">
+          <h5 class="card-title">Appetizers</h5>
+          <p class="card-text">Start your meal with delightful appetizers</p>
+          <a href="./menu.html#appetizers" class="explore-btn">Explore more...</a>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="./images/menu-images/10.ChickenDumBiryani.png" alt="Main Course">
+        <div class="card-body">
+          <h5 class="card-title">Main Course</h5>
+          <p class="card-text">Delicious main courses for a fulfilling meal</p>
+          <a href="./menu.html#maincourse" class="explore-btn">Explore more...</a>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="./images/menu-images/19.RasMalai.png" alt="Desserts">
+        <div class="card-body">
+          <h5 class="card-title">Desserts</h5>
+          <p class="card-text">End your meal with delightful, sweet treats</p>
+          <a href="./menu.html#desserts" class="explore-btn">Explore more...</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->  
+      <div class="card">
+        <img src="./images/menu-images/Mango Lassi.png" alt="Beverages">
+        <div class="card-body">
+          <h5 class="card-title">Beverages</h5>
+          <p class="card-text">Refresh yourself with our beverage options</p>
+          <a href="./menu.html#beverages" class="explore-btn">Explore more...</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="./images/menu-images/22.Dryfruit Laddus.png" alt="Snacks">
+        <div class="card-body">
+          <h5 class="card-title">Snacks</h5>
+          <p class="card-text">Perfect delicious snacks for any time of the day</p>
+          <a href="./menu.html#snacks" class="explore-btn">Explore more...</a>
+        </div>
+      </div>
+    </div>    
+  
+      <!-- FAQ Section -->
+      <section>
+        <div id="faq-section" class="box">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faqs">
+                <details>
+                    <summary>How do I place an order?</summary>
+                    <p>You can place your order through our Contact Us page, via email at [email address], or by calling [phone number]. </p>
+                </details>
+                <details>
+                    <summary>How long does delivery take?</summary>
+                    <p>ypically, orders are delivered within [time range], depending on your location and order size.</p>
+                </details>
+                <details>
+                    <summary>What payment methods do you accept?</summary>
+                    <p>We accept credit/debit cards, digital wallets, and cash on delivery.</p>
+                </details>
+                <details>
+                    <summary>How do you ensure food quality and safety?</summary>
+                    <p>Our meals are prepared in a hygienic environment following all safety regulations, using fresh and high-quality ingredients.</p>
+                </details>
+                <details>
+                    <summary>Do you cater for parties or events?</summary>
+                    <p>Yes, we offer catering services for small and large gatherings. Contact us for a customized menu and pricing.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+      <!-- Customer Reviews Section -->
+      <!-- <div class="section__container">
+        <div class="header-test">
+          <p>TESTIMONIALS</p>
+          <h1>What our customers say about us.</h1>
+        </div>
+        <div class="testimonials__grid">
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              Shammy's Cuisine made our birthday party unforgettable! The food was delicious, and everything was delivered perfectly on time.
+            </p>
+            <hr />
+            <img src="./images/pic-1.jpg" alt="user" />
+            <p class="name">Allan Collins</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              We ordered for a family get-together, and everyone raved about the biryani and kebabs. Thank you for making it so special!
+            </p>
+            <hr />
+            <img src="./images/pic-2.jpeg" alt="user" />
+            <p class="name">Clay Washington</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              The food arrived hot and fresh, ready to serve. It felt like dining at a high-end restaurant but in the comfort of our home!
+            </p>
+            <hr />
+            <img src="./images/pic-3.jpg" alt="user" />
+            <p class="name">Tanya Grant</p>
+          </div>
+        </div>
+        
+      </div> -->
+      
+      <!-- <div class="section__container">
+        <div class="header-test">
+          <p>TESTIMONIALS</p>
+          <h1>What our customers say about us.</h1>
+        </div>
+        <div class="testimonials__grid">
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              Shammy's Cuisine made our birthday party unforgettable! The food was delicious, and everything was delivered perfectly on time.
+            </p>
+            <hr />
+            <img src="./images/pic-1.jpg" alt="user" />
+            <p class="name">Allan Collins</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              We ordered for a family get-together, and everyone raved about the biryani and kebabs. Thank you for making it so special!
+            </p>
+            <hr />
+            <img src="./images/pic-2.jpeg" alt="user" />
+            <p class="name">Clay Washington</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              The food arrived hot and fresh, ready to serve. It felt like dining at a high-end restaurant but in the comfort of our home!
+            </p>
+            <hr />
+            <img src="./images/pic-3.jpg" alt="user" />
+            <p class="name">Tanya Grant</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              The customer service was exceptional. They catered to all our needs and made sure we had the perfect experience!
+            </p>
+            <hr />
+            <img src="./images/pic-4.jpg" alt="user" />
+            <p class="name">Jessica Hall</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              A fantastic dining experience! Every dish was flavorful, and the delivery was seamless. Highly recommended!
+            </p>
+            <hr />
+            <img src="./images/pic-5.jpg" alt="user" />
+            <p class="name">Robert White</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              Excellent food quality and prompt delivery. We were very impressed with the presentation and taste of everything!
+            </p>
+            <hr />
+            <img src="./images/pic-6.jpg" alt="user" />
+            <p class="name">Sarah Evans</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              I love how easy it was to order, and the food exceeded our expectations! Definitely ordering again soon.
+            </p>
+            <hr />
+            <img src="./images/pic-7.jpg" alt="user" />
+            <p class="name">James Parker</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              The best takeaway experience I’ve ever had. The food was perfectly cooked, and the delivery was spot on!
+            </p>
+            <hr />
+            <img src="./images/pic-8.jpg" alt="user" />
+            <p class="name">Linda Davis</p>
+          </div>
+          <div class="card-test">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <p>
+              Every meal we've had from Shammy's Cuisine has been a treat. Highly satisfied with the service and food quality!
+            </p>
+            <hr />
+            <img src="./images/pic-9.jpg" alt="user" />
+            <p class="name">Daniel Clark</p>
+          </div>
+        </div>
+      </div>
+       -->
+      
+       <div class="section__container">
+        <div class="header-test">
+            <p>TESTIMONIALS</p>
+            <h1>What our customers say about us.</h1>
+        </div>
+        <div class="testimonials__slider">
+            <div class="testimonials__track">
+                <div class="card-test">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <p>Shammy's Cuisine made our birthday party unforgettable! The food was delicious, and everything was delivered perfectly on time.</p>
+                    <hr />
+                    <img src="./images/pic-1.jpg" alt="user" />
+                    <p class="name">Allan Collins</p>
+                </div>
+                <div class="card-test">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <p>We ordered for a family get-together, and everyone raved about the biryani and kebabs. Thank you for making it so special!</p>
+                    <hr />
+                    <img src="./images/pic-2.jpeg" alt="user" />
+                    <p class="name">Clay Washington</p>
+                </div>
+                <div class="card-test">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <p>The food arrived hot and fresh, ready to serve. It felt like dining at a high-end restaurant but in the comfort of our home!</p>
+                    <hr />
+                    <img src="./images/pic-3.jpg" alt="user" />
+                    <p class="name">Tanya Grant</p>
+                </div>
+                <div class="card-test">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <p>The customer service was exceptional. They catered to all our needs and made sure we had the perfect experience!</p>
+                    <hr />
+                    <img src="./images/pic-4.jpg" alt="user" />
+                    <p class="name">Jessica Hall</p>
+                </div>
+                <div class="card-test">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <p>A fantastic dining experience! Every dish was flavorful, and the delivery was seamless. Highly recommended!</p>
+                    <hr />
+                    <img src="./images/pic-5.jpg" alt="user" />
+                    <p class="name">Robert White</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!--footer-->
+      <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="./aboutus.html">about us</a></li>
+                        <li><a href="./contactus.html">contact us</a></li>
+                        <!-- <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="./index.html#faq-section">FAQ</a></li>
+                        <!-- <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61570026141018"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/shammys_cuisine"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copywrite">
+            <p>&copy; 2024 ShammysCuisine. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+   
+    <script src="homepage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+</body>
+</html>
