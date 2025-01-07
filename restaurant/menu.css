@@ -235,6 +235,7 @@ ul {
   background-color: #24262b;
   padding-top: 40px;
   padding-bottom: 10px;
+  
 }
 .footer-col {
   width: 25%;
@@ -302,14 +303,9 @@ ul {
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
-    margin-bottom: 30px;
   }
 }
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  }
-}
+
 
 /* modal */
 .modal {

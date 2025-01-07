@@ -1,6 +1,11 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  margin: 0; /* Remove default margin */
+
   }
   
   .navbar {
@@ -52,8 +57,12 @@ body {
   
   h2 {
     margin-bottom: 20px;
+    text-align: center;
+    color: #ff5722;
   }
-  
+main{
+  flex: 1;
+}
   /* Cart Table Styles */
   .table {
     margin-top: 20px;
@@ -112,6 +121,8 @@ ul {
   background-color: #24262b;
   padding-top: 40px;
   padding-bottom: 10px;
+  bottom: 0;
+  width: 100%; 
 }
 .footer-col {
   width: 25%;
@@ -179,11 +190,5 @@ ul {
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
   }
 }

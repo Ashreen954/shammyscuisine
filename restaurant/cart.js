@@ -1,6 +1,8 @@
 const cartItemsElement = document.getElementById("cart-items");
 const totalBillElement = document.getElementById("total-bill");
 const cartBadge = document.querySelector(".cart-badge");
+const cartHeading = document.querySelector('h2');
+
 let totalBill = 0;
 
 // Function to update the cart count displayed on the badge
@@ -29,7 +31,6 @@ function updateCartCount() {
 }
 
 
-
 // Function to update total bill
 function updateTotalBill() {
     totalBill = 0;
@@ -46,6 +47,24 @@ function updateTotalBill() {
 // Get the items order array
 const itemsOrder = JSON.parse(localStorage.getItem("itemsOrder")) || [];
 
+function checkAndDisplayEmptyCartMessage() {
+    if (itemsOrder.length === 0) {
+
+        cartHeading.textContent = 'Your cart is empty';
+        cartHeading.style.textAlign = 'center';
+        
+        // Hide the cart table and total bill
+        document.querySelector('table').style.display = 'none';
+        totalBillElement.style.display = 'none';
+        
+        // Show empty cart message
+        cartItemsElement.innerHTML = `<tr><td colspan="6" class="text-center">Your cart is empty</td></tr>`;
+    } else {
+        // Show the table and total bill again if there are items
+        document.querySelector('table').style.display = 'table';
+        totalBillElement.style.display = 'block';
+    }
+}
 // Iterate through the itemsOrder array
 itemsOrder.forEach((key) => {
     const itemData = JSON.parse(localStorage.getItem(key));
@@ -121,12 +140,28 @@ itemsOrder.forEach((key) => {
         });
 
         // Delete item from cart
+        // Delete item from cart
         deleteButton.addEventListener("click", () => {
-            localStorage.removeItem(key); // Remove the item from localStorage
-            row.remove(); // Remove the row from the table
-            updateTotalBill(); // Update the total bill
-            updateCartCount(); // Update the cart count after item deletion
+            // Remove the item from localStorage
+            localStorage.removeItem(key);
+        
+            // Update the global itemsOrder array by filtering out the deleted item
+            const updatedItemsOrder = itemsOrder.filter(item => item !== key);
+            localStorage.setItem("itemsOrder", JSON.stringify(updatedItemsOrder));
+        
+            // Update the global itemsOrder to reflect the change
+            itemsOrder.length = 0; // Clear the array in place
+            itemsOrder.push(...updatedItemsOrder); // Push the updated items back
+        
+            // Remove the row from the table
+            row.remove();
+        
+            // Update total bill, cart count, and empty cart message
+            updateTotalBill();
+            updateCartCount();
+            checkAndDisplayEmptyCartMessage();
         });
+        
 
         // Append row to the table
         cartItemsElement.appendChild(row);
@@ -135,97 +170,7 @@ itemsOrder.forEach((key) => {
 });
 
 
-// Iterate through localStorage to display each item
-// for (let key in localStorage) {
-//     if (localStorage.hasOwnProperty(key) && key !== "cartCount" && key !== "language") {
-//         const itemData = JSON.parse(localStorage.getItem(key));
-//         if (itemData) {
-//             const row = document.createElement("tr");
-//             const itemTotal = itemData.quantity * itemData.price;
-//             const minOrder = itemData.minOrder || 1; // Default to 1 if not set
-
-//             row.innerHTML = `
-//                 <td><img src="${itemData.imageUrl}" alt="${key}" style="width: 50px; height: 50px; object-fit: cover;"></td>
-//                 <td>${key}</td>
-//                 <td>
-//                     <div class="quantity-container">
-//                         <div>
-//                             <button class="decrement btn btn-sm btn-danger">-</button>
-//                             <span class="quantity">${itemData.quantity}</span>
-//                             <button class="increment btn btn-sm btn-success">+</button>
-//                         </div>
-//                         <p class="min-order-message">Minimum order quantity is ${minOrder}</p>
-//                     </div>
-//                 </td>
-//                 <td>€${itemData.price}</td>
-//                 <td class="item-total">€${itemTotal.toFixed(2)}</td>
-//                 <td><button class="delete-item btn btn-sm btn-danger">Delete</button></td>
-//             `;
-
-//             // Get the min order message and quantity elements
-//             const minOrderMessage = row.querySelector(".min-order-message");
-//             const quantityElement = row.querySelector(".quantity");
-
-//             // Add event listeners for the increment, decrement, and delete buttons
-//             const decrementButton = row.querySelector(".decrement");
-//             const incrementButton = row.querySelector(".increment");
-//             const deleteButton = row.querySelector(".delete-item");
-
-//             // Decrement quantity
-//             decrementButton.addEventListener("click", () => {
-//                 let quantity = parseInt(quantityElement.textContent); // Parse current quantity from UI.
-
-//                 if (quantity > minOrder) {
-//                     quantity--;
-//                     quantityElement.textContent = quantity; // Update the UI.
-//                     itemData.quantity = quantity; // Update the item data.
-//                     localStorage.setItem(key, JSON.stringify(itemData)); // Persist the updated quantity.
-
-//                     // Update item total and total bill.
-//                     row.querySelector(".item-total").textContent = `€${(itemData.quantity * itemData.price).toFixed(2)}`;
-//                     updateTotalBill();
-
-//                     // Show or hide the minOrderMessage based on the quantity
-//                     if (quantity < minOrder) {
-//                         minOrderMessage.style.display = "block";
-//                     } else {
-//                         minOrderMessage.style.display = "none";
-//                     }
-//                 } else {
-//                     quantityElement.textContent = minOrder;
-//                     itemData.quantity = minOrder;
-//                     localStorage.setItem(key, JSON.stringify(itemData));
-//                     minOrderMessage.style.display = "block";
-//                 }
-//             });
-
-//             // Increment quantity
-//             incrementButton.addEventListener("click", () => {
-//                 let quantity = parseInt(quantityElement.textContent);
-//                 quantity++;
-//                 quantityElement.textContent = quantity;
-//                 itemData.quantity = quantity;
-//                 localStorage.setItem(key, JSON.stringify(itemData));
-//                 row.querySelector(".item-total").textContent = `€${(itemData.quantity * itemData.price).toFixed(2)}`;
-//                 updateTotalBill();
-//                 minOrderMessage.style.display = "none";
-//             });
-
-//             // Delete item from cart
-//             deleteButton.addEventListener("click", () => {
-//                 localStorage.removeItem(key); // Remove the item from localStorage
-//                 row.remove(); // Remove the row from the table
-//                 updateTotalBill(); // Update the total bill
-//                 updateCartCount(); // Update the cart count after item deletion
-//             });
-
-//             // Append row to the table
-//             cartItemsElement.appendChild(row);
-//             totalBill += itemTotal;
-//         }
-//     }
-// }
-
 // Update the total bill and cart count on page load
+checkAndDisplayEmptyCartMessage()
 updateTotalBill();
 updateCartCount(); // Update the cart count when the page loads
