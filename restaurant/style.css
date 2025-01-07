@@ -38,8 +38,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 100px;
-    background-image: url("./images/menu-images/Background\ Homepage.png");
+    background-image: url("./images/menu-images/0.BackgroundHomepage.jpg");
     background-size: cover;
+    height: 400px;
   }
   
   .text-content {
@@ -48,20 +49,20 @@
   }
   
   .subtext {
-    font-style: italic;
-    color: #ddd6d6;
+    font-size: 1.1rem;
+    color: #ffff;
   }
   
   .main-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1.1rem;
     margin: 10px 0;
-    color: #fa2323;
+    color: #ffff;
   }
   
   .description {
-    font-size: 1.1rem;
-    color: #e8e6e6;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #d4b51c;
   }
   
   .image-content {
