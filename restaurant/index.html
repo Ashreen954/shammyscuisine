@@ -40,26 +40,37 @@
                   <li class="nav-item px-3">
                       <a class="nav-link" href="./contactus.html">Contact Us</a>
                   </li>
-                  <!-- Language Dropdown -->
                   <li class="nav-item dropdown px-3">
-                      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                          <li>
-                              <a class="dropdown-item" href="#" onclick="setLanguage('french')">
-                                  <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
-                              </a>
-                          </li>
-                          <li>
-                              <a class="dropdown-item" href="#" onclick="setLanguage('english')">
-                                  <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2"> English
-                              </a>
-                          </li>
-                      </ul>
-                  </li>
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('french')">
+                                <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('english')">
+                                <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2"> English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                 
               </ul>
           </div>
+           <!-- Language Dropdown -->
+           
+          <a href="./cart.html" class="cart-icon position-relative me-3">
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+              <!-- Dynamic notification count -->
+            </span>
+          </a>
       </div>
   </nav>
     
@@ -70,16 +81,11 @@
           <h1 class="main-heading">Fresh!!! HomeMade!!! & Unforgettable!!!!</h1>
           <p class="description">Shammy's Cuisine: Your Destination for Exquisite Flavors</p>
         </div>
-        <!-- <div class="image-content"> -->
-          <!-- <img src="./images/carousel3.jpg" alt="Delicious pizzas" class="circular-image"> -->
-          <!-- <img src="./images/menu-images/18.Gajar Halwa with Rabdi .png" alt="Delicious pizzas" class="circular-image">
-        </div> -->
-        
       </header>
 
     <!-- Top dishes -->
     <div>
-      <h1 style="text-align: center; margin-top: 20px;">Our Signature Dishes</h1>
+      <h1 style="text-align: center; margin-top: 20px;" id="signature-heading">Our Signature Dishes</h1>
       <!-- <h1 style="text-align: center; margin-top: 20px;">Must-Try Delicacies</h1> -->
       <div class="dishes-container">
         <div class="dish">
@@ -126,8 +132,9 @@
     </div>
     
     <br>
-    <h1 id="sub-heading">Discover the Taste of Excellence!</h1>
 
+   
+    <h1 id="sub-heading">Discover the Taste of Excellence!</h1>
 
     <!-- Menu cards -->
     <div class="container">
@@ -186,122 +193,178 @@
       <section>
         <div id="faq-section" class="box">
             <h1>Frequently Asked Questions</h1>
+    
+            <!-- General -->
+            <details>
+              <summary>General</summary>
+              <div class="faqs">
+                <details>
+                  <summary>What type of food do you serve?</summary>
+                  <p>We specialize in homemade, fresh, and authentic dishes inspired by traditional recipes, tailored to your taste.</p>
+                </details>
+                <details>
+                  <summary>Where are you located?</summary>
+                  <p>We operate in Rueil-Malmaison.</p>
+                </details>
+                <details>
+                  <summary>Are your ingredients fresh?</summary>
+                  <p>Absolutely! We use only fresh, high-quality ingredients to prepare every dish.</p>
+                </details>
+              </div>
+            </details>
+    
+            <!-- Ordering -->
+            <details>
+              <summary>Ordering</summary>
             <div class="faqs">
                 <details>
                     <summary>How do I place an order?</summary>
-                    <p>You can place your order through our Contact Us page, via email at [email address], or by calling [phone number]. </p>
+                    <p>You can order directly through our website by adding the items to the cart and clicking on confirm order. We will receive your order through WhatsApp.</p>
                 </details>
                 <details>
-                    <summary>How long does delivery take?</summary>
-                    <p>ypically, orders are delivered within [time range], depending on your location and order size.</p>
+                    <summary>How far in advance should I place an order?</summary>
+                    <p>We recommend placing your order at least 24-48 hours in advance for guaranteed delivery.</p>
                 </details>
                 <details>
-                    <summary>What payment methods do you accept?</summary>
-                    <p>We accept credit/debit cards, digital wallets, and cash on delivery.</p>
-                </details>
-                <details>
-                    <summary>How do you ensure food quality and safety?</summary>
-                    <p>Our meals are prepared in a hygienic environment following all safety regulations, using fresh and high-quality ingredients.</p>
-                </details>
-                <details>
-                    <summary>Do you cater for parties or events?</summary>
-                    <p>Yes, we offer catering services for small and large gatherings. Contact us for a customized menu and pricing.</p>
+                    <summary>Is there a minimum order requirement?</summary>
+                    <p>Yes, the minimum order value is €70.</p>
                 </details>
             </div>
+            </details>
+    
+            <!-- Delivery -->
+            <details>
+              <summary>Delivery</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Do you offer delivery services?</summary>
+                    <p>Yes, we deliver across Rueil-Malmaison and nearby areas. Delivery charges may apply depending on your location.</p>
+                </details>
+                <details>
+                    <summary>Can I pick up my order?</summary>
+                    <p>Yes, self-pickup is available. Please let us know when placing your order.</p>
+                </details>
+            </div>
+            </details>
+
+            <!-- Customization & Special Requests -->
+            <details>
+            <summary>Customization & Special Requests</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Can I request customizations for my meal?</summary>
+                    <p>Yes, we are happy to accommodate dietary preferences or special requests. Please let us know when placing your order.</p>
+                </details>
+                <details>
+                    <summary>Do you offer vegetarian or vegan options?</summary>
+                    <p>Yes, we have a variety of vegetarian and vegan dishes available.</p>
+                </details>
+            </div>
+            </details>
+            
+            <!-- Payments -->
+            <details>
+            <summary>Payments</summary>
+            <div class="faqs">
+                <details>
+                    <summary>What payment methods do you accept?</summary>
+                    <p>We accept cash and online payment options like PayPal.</p>
+                </details>
+            </div>
+            </details>
+
+            <!-- Others -->
+            <details>
+            <summary>Others</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Do you cater for events or parties?</summary>
+                    <p>Yes, we provide catering services for small gatherings and events. Contact us for more details.</p>
+                </details>
+                <details>
+                    <summary>How can I contact you?</summary>
+                    <p>You can reach us at Phone Number or Email Address, or through the contact form on our website.</p>
+                </details>
+            </div>
+            </details>
+
+            <!-- Food Quality & Preparation -->
+            <details>
+            <summary>Food Quality & Preparation</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Are your meals made fresh daily?</summary>
+                    <p>Yes, all our meals are prepared fresh every day in small batches to ensure quality and flavor.</p>
+                </details>
+                <details>
+                    <summary>Do you use any preservatives in your food?</summary>
+                    <p>No, our dishes are 100% free from preservatives, additives, and artificial flavors.</p>
+                </details>
+                <details>
+                  <summary>Are your dishes halal/kosher?</summary>
+                  <p>Yes, we  prepare halal meals upon request. Please mention your preference when placing your order.</p>
+              </details>
+            </div>
+            </details>
+
+            <!-- Health & Safety -->
+            <details>
+            <summary>Health & Safety</summary>
+            <div class="faqs">
+                <details>
+                    <summary>What steps do you take to ensure food safety?</summary>
+                    <p>We follow strict hygiene practices and maintain high food safety standards throughout preparation and delivery.</p>
+                </details>
+            </div>
+            </details>
+
+            <!-- Offers & Discounts -->
+            <details>
+            <summary>Offers & Discounts</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Do you offer discounts for bulk orders?</summary>
+                    <p>Yes, we offer discounts for large or bulk orders. Contact us for a personalized quote.</p>
+                </details>
+            </div>
+            </details>
+
+            <!-- Custom Orders & Seasonal Menus -->
+            <details>
+            <summary>Custom Orders & Seasonal Menus</summary>
+            <div class="faqs">
+                <details>
+                    <summary>Can I order something that is not on the menu?</summary>
+                    <p>Yes, we can accommodate special requests depending on availability. Contact us for details.</p>
+                </details>
+                <details>
+                    <summary>Do you have seasonal or festive menus?</summary>
+                    <p>Yes, we create special menus for holidays and festive seasons. Keep an eye on our website for updates.</p>
+                </details>
+                <details>
+                  <summary>Can I pre-order for future dates?</summary>
+                  <p>Yes, we accept pre-orders for up to 21 days in advance.</p>
+              </details>
+            </div>
+            </details>
+
+            <!-- Customer Support -->
+            <details>
+            <summary>Customer Support</summary>
+            <div class="faqs">
+                <details>
+                    <summary>What should I do if there’s an issue with my order?</summary>
+                    <p>Please contact us immediately at Phone Number/Email. We’ll resolve the issue promptly. </p>
+                </details>
+                <details>
+                    <summary>How can I leave feedback or a review?</summary>
+                    <p>We value your feedback! You can leave a review on our website, social media, or email us directly.</p>
+                </details>
+            </div>
+            </details>
+
         </div>
     </section>
-          <!-- Customer Reviews Section -->
-      <!-- <div class="section__container">
-        <div class="header-test">
-          <p>TESTIMONIALS</p>
-          <h1>What our customers say about us.</h1>
-        </div>
-        <div class="testimonials__grid">
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              Shammy's Cuisine made our birthday party unforgettable! The food was delicious, and everything was delivered perfectly on time.
-            </p>
-            <hr />
-            <img src="./images/pic-1.jpg" alt="user" />
-            <p class="name">Allan Collins</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              We ordered for a family get-together, and everyone raved about the biryani and kebabs. Thank you for making it so special!
-            </p>
-            <hr />
-            <img src="./images/pic-2.jpeg" alt="user" />
-            <p class="name">Clay Washington</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              The food arrived hot and fresh, ready to serve. It felt like dining at a high-end restaurant but in the comfort of our home!
-            </p>
-            <hr />
-            <img src="./images/pic-3.jpg" alt="user" />
-            <p class="name">Tanya Grant</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              The customer service was exceptional. They catered to all our needs and made sure we had the perfect experience!
-            </p>
-            <hr />
-            <img src="./images/pic-4.jpg" alt="user" />
-            <p class="name">Jessica Hall</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              A fantastic dining experience! Every dish was flavorful, and the delivery was seamless. Highly recommended!
-            </p>
-            <hr />
-            <img src="./images/pic-5.jpg" alt="user" />
-            <p class="name">Robert White</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              Excellent food quality and prompt delivery. We were very impressed with the presentation and taste of everything!
-            </p>
-            <hr />
-            <img src="./images/pic-6.jpg" alt="user" />
-            <p class="name">Sarah Evans</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              I love how easy it was to order, and the food exceeded our expectations! Definitely ordering again soon.
-            </p>
-            <hr />
-            <img src="./images/pic-7.jpg" alt="user" />
-            <p class="name">James Parker</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              The best takeaway experience I’ve ever had. The food was perfectly cooked, and the delivery was spot on!
-            </p>
-            <hr />
-            <img src="./images/pic-8.jpg" alt="user" />
-            <p class="name">Linda Davis</p>
-          </div>
-          <div class="card-test">
-            <span><i class="ri-double-quotes-l"></i></span>
-            <p>
-              Every meal we've had from Shammy's Cuisine has been a treat. Highly satisfied with the service and food quality!
-            </p>
-            <hr />
-            <img src="./images/pic-9.jpg" alt="user" />
-            <p class="name">Daniel Clark</p>
-          </div>
-        </div>
-      </div>
-       -->
-
 
       <!-- Customer Reviews Section -->      
        <div class="section__container">
@@ -315,35 +378,30 @@
                     <span><i class="ri-double-quotes-l"></i></span>
                     <p>Shammy's Cuisine made our birthday party unforgettable! The food was delicious, and everything was delivered perfectly on time.</p>
                     <hr />
-                    <img src="./images/pic-1.jpg" alt="user" />
                     <p class="name">Allan Collins</p>
                 </div>
                 <div class="card-test">
                     <span><i class="ri-double-quotes-l"></i></span>
                     <p>We ordered for a family get-together, and everyone raved about the biryani and kebabs. Thank you for making it so special!</p>
                     <hr />
-                    <img src="./images/pic-2.jpeg" alt="user" />
                     <p class="name">Clay Washington</p>
                 </div>
                 <div class="card-test">
                     <span><i class="ri-double-quotes-l"></i></span>
                     <p>The food arrived hot and fresh, ready to serve. It felt like dining at a high-end restaurant but in the comfort of our home!</p>
                     <hr />
-                    <img src="./images/pic-3.jpg" alt="user" />
                     <p class="name">Tanya Grant</p>
                 </div>
                 <div class="card-test">
                     <span><i class="ri-double-quotes-l"></i></span>
                     <p>The customer service was exceptional. They catered to all our needs and made sure we had the perfect experience!</p>
                     <hr />
-                    <img src="./images/pic-1.jpg" alt="user" />
                     <p class="name">Jessica Hall</p>
                 </div>
                 <div class="card-test">
                     <span><i class="ri-double-quotes-l"></i></span>
                     <p>A fantastic dining experience! Every dish was flavorful, and the delivery was seamless. Highly recommended!</p>
                     <hr />
-                    <img src="./images/pic-3.jpg" alt="user" />
                     <p class="name">Robert White</p>
                 </div>
             </div>
@@ -358,33 +416,25 @@
                     <ul>
                         <li><a href="./aboutus.html">about us</a></li>
                         <li><a href="./contactus.html">contact us</a></li>
-                        <!-- <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>get help</h4>
                     <ul>
                         <li><a href="./index.html#faq-section">FAQ</a></li>
-                        <!-- <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61570026141018"><i class="fab fa-facebook-f"></i></a>
-                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                         <a href="https://www.instagram.com/shammys_cuisine"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-copywrite">
-            <p>&copy; 2024 ShammysCuisine. All Rights Reserved.</p>
+            <p>&copy; 2025 ShammysCuisine. All Rights Reserved.</p>
         </div>
       </footer>
 
