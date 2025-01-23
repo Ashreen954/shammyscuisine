@@ -5,21 +5,21 @@ function setLanguage(language) {
   
     if (language === 'french') {
         dropdownToggle.innerHTML = `
-            <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
+            <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2">
         `;
         // Additional logic to switch content to French
     } else if (language === 'english') {
         dropdownToggle.innerHTML = `
-            <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2"> English
+            <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2">
         `;
         // Additional logic to switch content to English
     }
-  }
+}
   
-  // Set the default language to French on page load
-  document.addEventListener('DOMContentLoaded', () => {
+// Set the default language to French on page load
+document.addEventListener('DOMContentLoaded', () => {
     setLanguage('french');
-  });
+});
 
 //   const scrollContainer = document.querySelector('.testimonials__grid');
 //   let scrollSpeed = 1; // Adjust the scroll speed

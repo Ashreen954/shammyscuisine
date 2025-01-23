@@ -17,63 +17,61 @@
 </head>
 <body>
 
-    <!--responsive navbar-->    
-     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img src="./images/logo-removebg-preview.png" alt="Logo" width="150px">
+    <!--responsive navbar-->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./images/WhatsApp Image 2025-01-20 at 5.49.58 PM.jpeg" alt="Logo" width="150px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto px-5">
+        <li class="nav-item px-3">
+          <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="./menu.html">Menu</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="./aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="./contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Language Dropdown -->
+    <li class="nav-item dropdown px-3">
+      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="./images/FRA_logo.png" alt="French" width="20px"> <!-- No text here -->
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('french')">
+            <img src="./images/FRA_logo.png" alt="French" width="20px"> <!-- Just the image -->
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto px-5">
-                  <li class="nav-item px-3">
-                      <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-                  </li>
-                  <li class="nav-item px-3">
-                      <a class="nav-link" href="./menu.html">Menu</a>
-                  </li>
-                  <li class="nav-item px-3">
-                      <a class="nav-link" href="./aboutus.html">About Us</a>
-                  </li>
-                  <li class="nav-item px-3">
-                      <a class="nav-link" href="./contactus.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item dropdown px-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li>
-                            <a class="dropdown-item" href="#" onclick="setLanguage('french')">
-                                <img src="./images/FRA_logo.png" alt="French" width="20px" class="me-2"> Français
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#" onclick="setLanguage('english')">
-                                <img src="./images/USA_logo.png" alt="English" width="20px" class="me-2"> English
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                 
-              </ul>
-          </div>
-           <!-- Language Dropdown -->
-           
-          <a href="./cart.html" class="cart-icon position-relative me-3">
-            <i class="fas fa-shopping-cart"></i>
-            <span
-              class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >
-              0
-              <!-- Dynamic notification count -->
-            </span>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('english')">
+            <img src="./images/USA_logo.png" alt="English" width="20px"> <!-- Just the image -->
           </a>
-      </div>
-  </nav>
-    
+        </li>
+      </ul>
+    </li>
+
+    <!-- Cart Icon -->
+    <a href="./cart.html" class="cart-icon position-relative me-3">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </a>
+  </div>
+</nav>
+
     <!--Header Content  -->
       <header class="header">   
         <div class="text-content">

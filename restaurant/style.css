@@ -6,6 +6,7 @@
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: "Noto Serif", sans-serif; */
 }
+
 .navbar {
   background-color: #ffffff;
 }
@@ -33,42 +34,103 @@
 }
 
 .cart-icon i {
-  font-size: 1.5rem; /* Increase size of cart icon */
-  color: #ff9800; /* Change cart icon color to orange */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
+  font-size: 1.5rem;
+  color: #ff9800;
+  transition: transform 0.3s ease;
 }
 
 .cart-icon:hover i {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1);
 }
 
 .cart-badge {
-  background-color: #e91e63; /* Change badge background color to a different shade */
+  background-color: #e91e63;
   font-size: 0.1rem;
-  padding: 0.1rem; /* Adjust padding around the number */
+  padding: 0.1rem;
 }
+
 .cart-badge:hover {
   transform: scale(1.1);
 }
-/* Adjust spacing for smaller screens */
+
+
+/* Adjust navbar layout and spacing for larger screens */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    margin-right: auto; /* Ensure navigation is aligned left */
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+
+  .navbar-toggler {
+    display: none; /* Hide toggler on larger screens */
+  }
+
+  .cart-icon {
+    margin-left: 15px; /* Space between cart and language dropdown */
+  }
+}
+
+/* For smaller screens, adjust the layout for better stacking */
+@media (max-width: 991px) {
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    margin-right: 0; /* No additional right margin */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggler */
+  }
+
+  .cart-icon {
+    margin-left: 10px; /* Adjust for smaller screens */
+  }
+}
+
+/* For mobile screens */
 @media (max-width: 480px) {
   .navbar .container-fluid {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 10px; /* Reduce right padding to bring elements closer */
+    padding-right: 10px;
   }
 
   .navbar-toggler {
-    margin-right: 5px; /* Reduce margin between toggler and cart */
+    margin-right: 5px;
   }
 
   .cart-icon {
-    margin-left: 0; /* Remove any additional left margin */
+    margin-left: 0;
   }
 }
 
+li.nav-item.dropdown.px-3,
+li.nav-item.dropdown.px-3 ul.dropdown-menu li {
+  list-style: none;
+}
 
+li.nav-item.dropdown.px-3 a.nav-link,
+li.nav-item.dropdown.px-3 ul.dropdown-menu a.dropdown-item {
+  font-size: 1.2rem; /* Adjust as needed */
+}
 
 /* header content */
 .header {
