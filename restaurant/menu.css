@@ -34,37 +34,115 @@ body {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Translate buttons */
-.translate-buttons {
-  display: flex;
-  gap: 10px;
+li.nav-item.dropdown.px-3,
+li.nav-item.dropdown.px-3 ul.dropdown-menu li {
+  list-style: none;
 }
 
-.translate-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #f9f9f9;
+li.nav-item.dropdown.px-3 a.nav-link,
+li.nav-item.dropdown.px-3 ul.dropdown-menu a.dropdown-item {
+  font-size: 1.2rem; /* Adjust as needed */
 }
 
 .cart-icon i {
-  font-size: 0.5rem; 
-  color: #ff9800; /* Change cart icon color to orange */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
+  font-size: 1.5rem;
+  color: #ff9800;
+  transition: transform 0.3s ease;
 }
 
 .cart-icon:hover i {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1);
 }
 
 .cart-badge {
-  background-color: #e91e63; /* Change badge background color to a different shade */
-  font-size: 0.2rem; /* Increase size of badge text */
-  padding: 0.5rem; /* Adjust padding around the number */
+  background-color: #e91e63;
+  font-size: 0.1rem;
+  padding: 0.1rem;
 }
 
+.cart-badge:hover {
+  transform: scale(1.1);
+}
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+
+
+
+
+/* Adjust navbar layout and spacing for larger screens */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    margin-right: auto; /* Ensure navigation is aligned left */
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+
+  .navbar-toggler {
+    display: none; /* Hide toggler on larger screens */
+  }
+
+  .cart-icon {
+    margin-left: 15px; /* Space between cart and language dropdown */
+  }
+}
+
+/* For smaller screens, adjust the layout for better stacking */
+@media (max-width: 991px) {
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    margin-right: 0; /* No additional right margin */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggler */
+  }
+
+  .cart-icon {
+    margin-left: 10px; /* Adjust for smaller screens */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  .navbar-toggler {
+    margin-right: 5px;
+  }
+
+  .cart-icon {
+    margin-left: 0;
+  }
+}
+
+
+/* Header Content */
 header {
   background-color: #333;
   color: white;
@@ -108,6 +186,15 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all cards have the same height */
+}
+
+.menu-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-image {
@@ -116,12 +203,8 @@ main {
   object-fit: cover;
 }
 
-.menu-content {
-  padding: 1rem;
-}
-
 .menu-content h3 {
-  margin: 0;
+  margin-top: 5px;
   color: #333;
 }
 
@@ -137,6 +220,11 @@ main {
   color: #000;
   font-weight: bold;
   margin-top: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0 !important;
 }
 
 
@@ -170,11 +258,12 @@ main {
 }
 
 /* Cart Controls Styles */
+
 .cart-controls {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 1rem;
+  margin: 10px 0 ; /* Push buttons to the bottom */
   justify-content: space-around;
 }
 
@@ -264,7 +353,6 @@ main {
   outline: none;
 }
 
-
 /* footer */
 .container-footer {
   max-width: 1170px;
@@ -282,7 +370,6 @@ ul {
   background-color: #24262b;
   padding-top: 40px;
   padding-bottom: 10px;
-  
 }
 .footer-col {
   width: 25%;
@@ -347,7 +434,13 @@ ul {
 }
 
 /*responsive*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+/*responsive*/
+@media (max-width: 480px) {
   .footer-col {
     width: 50%;
   }

@@ -19,12 +19,13 @@
 
   </head>
   <body>
+    
     <!--responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="./images/logo-removebg-preview.png"
+            src="./images/WhatsApp Image 2025-01-20 at 5.49.58 PM.jpeg"
             alt="Logo"
             width="150px"
           />
@@ -41,75 +42,74 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+          <ul class="navbar-nav px-5">
+            <li class="nav-item px-3">
               <a class="nav-link" aria-current="page" href="./index.html"
                 >Home</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="./menu.html">Menu</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="./aboutus.html">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="./contactus.html">Contact Us</a>
             </li>
-            <!-- Language Dropdown -->
-            <!-- Language Dropdown -->
-            <li class="nav-item dropdown px-3">
+          </ul>
+        </div>
+
+        <!-- Language Dropdown -->
+        <li class="nav-item dropdown px-3">
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center"
+            href="#"
+            id="languageDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="./images/USA_1_LOGO.jpg"
+              alt="French"
+              width="25px"
+              class="me-2"
+            />
+            <span class="language-text">English</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
               <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="languageDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                class="dropdown-item d-flex align-items-center"
+                href="./frenchmenu.html"
               >
                 <img
-                  src="./images/FRA_logo.png"
+                  src="./images/FRANCE_logo.png"
                   alt="French"
                   width="20px"
                   class="me-2"
                 />
                 Français
               </a>
-              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    onclick="setLanguage('french')"
-                  >
-                    <img
-                      src="./images/FRA_logo.png"
-                      alt="French"
-                      width="20px"
-                      class="me-2"
-                    />
-                    Français
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    onclick="setLanguage('english')"
-                  >
-                    <img
-                      src="./images/USA_logo.png"
-                      alt="English"
-                      width="20px"
-                      class="me-2"
-                    />
-                    English
-                  </a>
-                </li>
-              </ul>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="./menu.html"
+              >
+                <img
+                  src="./images/USA_1_LOGO.jpg"
+                  alt="English"
+                  width="20px"
+                  class="me-2"
+                />
+                English
+              </a>
             </li>
           </ul>
-        </div>
+        </li>
+
         <!-- Cart Icon -->
         <a href="./cart.html" class="cart-icon position-relative me-3">
           <i class="fas fa-shopping-cart"></i>
@@ -117,27 +117,25 @@
             class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
           >
             0
-            <!-- Dynamic notification count -->
           </span>
         </a>
       </div>
     </nav>
+
     <!-- Menu section -->
     <main>
       <!--Apetizers Section-->
       <section id="appetizers" class="menu-category">
         <h2>Appetizers</h2>
-        <!-- <h2 class="description-en">Appetizers</h2> -->
-        <!-- <h2 class="description-fr">Entrées</h2> -->
         <div class="menu-grid">
           <!-- Card 1 -->
           <div class="menu-card">
             <img src="./images/menu-images/1.Kachori.png" alt="Kachori" class="menu-image"/>
             <div class="menu-content">
               <h3>Kachori</h3>
-              <p class="description-en">Kachori is a deep-fried pastry filled with spiced lentils stuffing.</p>
-              <p class="description-fr">Une farce à base de lentilles dans une boule de farine cuite dans de l’huile</p>
-              <p class="price">€10.00</p>
+              <p>Kachori is a deep-fried pastry filled with spiced lentils stuffing.</p>
+              <p class="price">€10.00 (includes 4 pieces)</p>
+              <!-- <p class="price-desc"> (4 pieces included)</p> -->
               <div class="cart-controls">
                 <button class="decrement">-</button>
                 <span class="quantity">3</span>
@@ -155,17 +153,11 @@
             />
             <div class="menu-content">
               <h3>Papdi Chaat</h3>
-              <p class="description-en">
+              <p>
                 Papdi chaat is a popular Indian street food made with crispy
                 fried flour crackers (papdi), topped with a mix of spiced
                 potatoes, chickpeas, yogurt, tangy tamarind chutney, and
                 aromatic spices.
-              </p>
-              <p class="description-fr">
-                Le papdi chaat est un célèbre snack indien composé de galettes
-                croustillantes frites (papdi), garnies de pommes de terre
-                épicées, pois chiches, yaourt, chutney de tamarin acidulé et
-                d'épices aromatiques.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -192,12 +184,8 @@
             />
             <div class="menu-content">
               <h3>Dahi Bhalla</h3>
-              <p class="description-en">
+              <p>
                 Soft lentil dumplings soaked in yogurt, spices, and chutneys.
-              </p>
-              <p class="description-fr">
-                Boulettes de lentilles moelleuses dans du yaourt, épices et
-                chutneys.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -224,11 +212,8 @@
             />
             <div class="menu-content">
               <h3>Ram Laddu</h3>
-              <p class="description-en">
+              <p>
                 Crispy lentil fritters topped with radish, chutney, and spices.
-              </p>
-              <p class="description-fr">
-                Beignets de lentilles croustillants garnis de radis et chutneys.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -255,11 +240,8 @@
             />
             <div class="menu-content">
               <h3>Idli</h3>
-              <p class="description-en">
+              <p>
                 Steamed rice cakes served with chutney and flavorful sambar.
-              </p>
-              <p class="description-fr">
-                Gâteaux de riz vapeur servis avec chutney et sambar savoureux.
               </p>
               <p class="price">€5.00</p>
               <div class="cart-controls">
@@ -286,12 +268,8 @@
             />
             <div class="menu-content">
               <h3>Medu Vada</h3>
-              <p class="description-en">
+              <p>
                 Crispy lentil donuts with soft centers, paired with chutney.
-              </p>
-              <p class="description-fr">
-                Beignets de lentilles croustillants, moelleux au centre, avec
-                chutney.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -318,13 +296,9 @@
             />
             <div class="menu-content">
               <h3>Dal Vada</h3>
-              <p class="description-en">
+              <p>
                 Crunchy lentil fritters seasoned with spices, perfect tea-time
                 snack.
-              </p>
-              <p class="description-fr">
-                Beignets de lentilles épicés et croustillants, parfaits pour le
-                thé.
               </p>
               <p class="price">€5.00</p>
               <div class="cart-controls">
@@ -351,13 +325,9 @@
             />
             <div class="menu-content">
               <h3>Kothimbari Vadi</h3>
-              <p class="description-en">
+              <p>
                 Coriander-based savory bites, steamed and fried, spiced to
                 perfection.
-              </p>
-              <p class="description-fr">
-                Bouchées savoureuses à la coriandre, cuites à la vapeur et
-                frites.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -391,7 +361,7 @@
       
       <!-- Main Course Section -->
       <section id="maincourse" class="menu-category">
-        <h2>Plats/Main Course</h2>
+        <h2>Main Course</h2>
         <div class="menu-grid">
           <div class="menu-card">
             <img
@@ -401,12 +371,9 @@
             />
             <div class="menu-content">
               <h3>Lamb Dum Biryani</h3>
-              <p class="description-en">
+              <p>
                 Aromatic lamb biryani slow-cooked with spices, herbs, and
                 basmati rice.
-              </p>
-              <p class="description-fr">
-                Biryani d'agneau parfumé, mijoté avec riz basmati et épices.
               </p>
               <p class="price">€13.9</p>
               <div class="cart-controls">
@@ -425,11 +392,8 @@
             />
             <div class="menu-content">
               <h3>Chicken Dum Biryani</h3>
-              <p class="description-en">
+              <p>
                 Flavorful chicken biryani layered with fragrant rice and spices.
-              </p>
-              <p class="description-fr">
-                Biryani au poulet épicé et riz basmati délicatement parfumé.
               </p>
               <p class="price">€12.9</p>
               <div class="cart-controls">
@@ -448,12 +412,9 @@
             />
             <div class="menu-content">
               <h3>Vegetable Dum Biryani</h3>
-              <p class="description-en">
+              <p>
                 Vegetable-loaded biryani with layers of rice, spices, and
                 flavors.
-              </p>
-              <p class="description-fr">
-                Biryani végétarien avec légumes, riz parfumé et épices.
               </p>
               <p class="price">€11.9</p>
               <div class="cart-controls">
@@ -472,8 +433,7 @@
             />
             <div class="menu-content">
               <h3>Chicken Curry In-house Special</h3>
-              <p class="description-en">Succulent chicken cooked in a fragrant blend of spices, delivering bold flavors with every bite</p>
-              <p class="description-fr">Poulet tendre mijoté dans un mélange parfumé d'épices, offrant des saveurs intenses à chaque bouchée</p>
+              <p>Succulent chicken cooked in a fragrant blend of spices, delivering bold flavors with every bite</p>
               <p class="price">€8.9</p>
               <div class="cart-controls">
                 <button class="decrement">-</button>
@@ -491,8 +451,7 @@
             />
             <div class="menu-content">
               <h3>Lamb Curry In-house Special</h3>
-              <p class="description-en">Succulent lamb simmered in a rich blend of spices for a flavorful and hearty curry.</p>
-              <p class="description-fr">Agneau fondant mijoté dans un mélange riche d'épices pour un curry savoureux et généreux</p>
+              <p>Succulent lamb simmered in a rich blend of spices for a flavorful and hearty curry.</p>
               <p class="price">€10.9</p>
               <div class="cart-controls">
                 <button class="decrement">-</button>
@@ -510,8 +469,7 @@
             />
             <div class="menu-content">
               <h3>Vegetable Curry In-house Special</h3>
-              <p class="description-en">Mixed Vegetables Curry</p>
-              <p class="description-fr">Curry de légumes mélangés avec sauce traditionnelle et moyennement épicée</p>
+              <p>Mixed Vegetables Curry</p>
               <p class="price">€7.9</p>
               <div class="cart-controls">
                 <button class="decrement">-</button>
@@ -529,8 +487,7 @@
             />
             <div class="menu-content">
               <h3>Matar/Zeera/Saffron Rice</h3>
-              <p class="description-en">Basmati rice with Peas / Cumin / Saffron</p>
-              <p class="description-fr">Riz basmati avec petits pois / Cumin/Safran</p>
+              <p>Basmati rice with Peas / Cumin / Saffron</p>
               <p class="price">€4.9</p>
               <div class="cart-controls">
                 <button class="decrement">-</button>
@@ -555,12 +512,9 @@
             />
             <div class="menu-content">
               <h3>Apricot Delight</h3>
-              <p class="description-en">
+              <p>
                 Sweet apricot dessert layered with cream, apricots, and rich
                 flavors.
-              </p>
-              <p class="description-fr">
-                Dessert sucré d'abricots en couches avec crème délicieuse.
               </p>
               <p class="price">€10.00</p>
               <div class="cart-controls">
@@ -579,11 +533,8 @@
             />
             <div class="menu-content">
               <h3>Gulab Jamun</h3>
-              <p class="description-en">
+              <p>
                 Deep-fried milk dumplings soaked in aromatic sugar syrup.
-              </p>
-              <p class="description-fr">
-                Boulettes de lait frites trempées dans un sirop aromatisé.
               </p>
               <p class="price">€5.00</p>
               <div class="cart-controls">
@@ -602,12 +553,9 @@
             />
             <div class="menu-content">
               <h3>Gajar Halwa with Rabdi</h3>
-              <p class="description-en">
+              <p>
                 Carrot halwa topped with creamy, thickened milk, rich and
                 delicious.
-              </p>
-              <p class="description-fr">
-                Halwa de carottes nappé de lait épaissi et crémeux.
               </p>
               <p class="price">€12.00</p>
               <div class="cart-controls">
@@ -626,11 +574,8 @@
             />
             <div class="menu-content">
               <h3>RasMalai</h3>
-              <p class="description-en">
+              <p>
                 Soft paneer dumplings soaked in saffron-infused, sweetened milk.
-              </p>
-              <p class="description-fr">
-                Boulettes de paneer trempées dans du lait sucré au safran.
               </p>
               <p class="price">€12.00</p>
               <div class="cart-controls">
@@ -646,7 +591,7 @@
 
       <!-- Beverages Section -->
       <section id="beverages" class="menu-category">
-        <h2>Boissons/Beverages</h2>
+        <h2>Beverages</h2>
         <div class="menu-grid">
           <div class="menu-card">
             <img
@@ -656,11 +601,8 @@
             />
             <div class="menu-content">
               <h3>Mango Lassi</h3>
-              <p class="description-en">
+              <p>
                 Creamy yogurt drink blended with ripe mangoes and sugar.
-              </p>
-              <p class="description-fr">
-                Boisson crémeuse au yaourt mélangée avec mangues mûres et sucre.
               </p>
               <p class="price">€4.00</p>
               <div class="cart-controls">
@@ -679,11 +621,8 @@
             />
             <div class="menu-content">
               <h3>Rose Lassi</h3>
-              <p class="description-en">
+              <p>
                 Sweet yogurt drink infused with refreshing rose syrup flavor.
-              </p>
-              <p class="description-fr">
-                Boisson sucrée au yaourt infusée de sirop de rose.
               </p>
               <p class="price">€4.00</p>
               <div class="cart-controls">
@@ -706,8 +645,7 @@
             <img src="./images/menu-images/22.Dryfruit Laddus.png" alt="Dryfruit Laddus"class="menu-image"/>
             <div class="menu-content">
               <h3>DryFruit Laddus</h3>
-              <p class="description-en">Nut-packed energy balls made with ghee, nuts, seeds & dryfruits.</p>
-              <p class="description-fr">Boules énergétiques aux fruits secs, ghee et sucre.</p>
+              <p>Nut-packed energy balls made with ghee, nuts, seeds & dryfruits.</p>
               <p class="price">€24.00</p>
               <div class="cart-controls">
                 <button class="decrement">-</button>
@@ -725,11 +663,8 @@
             />
             <div class="menu-content">
               <h3>Urad Dal Laddus</h3>
-              <p class="description-en">
+              <p>
                 Sweet balls of roasted black gram flour and rich flavors.
-              </p>
-              <p class="description-fr">
-                Boules sucrées de farine de lentilles noires grillées et ghee.
               </p>
               <p class="price">€18.00</p>
               <div class="cart-controls">
@@ -748,13 +683,9 @@
             />
             <div class="menu-content">
               <h3>Cookies</h3>
-              <p class="description-en">
+              <p>
                 Crunchy, baked treats with endless flavors and delightful
                 textures.
-              </p>
-              <p class="description-fr">
-                Biscuits croustillants aux saveurs variées et textures
-                délicieuses.
               </p>
               <p class="price">€9.00</p>
               <div class="cart-controls">
@@ -773,13 +704,9 @@
             />
             <div class="menu-content">
               <h3>Cup Cakes</h3>
-              <p class="description-en">
+              <p>
                 Mini cakes with frosting, perfect for celebrations and sweet
                 cravings.
-              </p>
-              <p class="description-fr">
-                Mini-gâteaux glacés, parfaits pour célébrations et envies
-                sucrées.
               </p>
               <p class="price">€9.00</p>
               <div class="cart-controls">
@@ -798,13 +725,9 @@
             />
             <div class="menu-content">
               <h3>Brownies</h3>
-              <p class="description-en">
+              <p>
                 Fudgy chocolate squares with a rich, decadent, and chewy
                 texture.
-              </p>
-              <p class="description-fr">
-                Carrés chocolatés fondants, riches, et au goût intense et
-                gourmand.
               </p>
               <p class="price">€12.00</p>
               <div class="cart-controls">
@@ -823,11 +746,8 @@
             />
             <div class="menu-content">
               <h3>TeaTime Cakes (Carrot,Banana Walnut, Vanilla, Chocolate)</h3>
-              <p class="description-en">
+              <p>
                 Light, spongy cakes ideal for enjoying with evening tea.
-              </p>
-              <p class="description-fr">
-                Gâteaux légers et moelleux parfaits pour accompagner le thé.
               </p>
               <p class="price">€6.00</p>
               <div class="cart-controls">
@@ -851,19 +771,12 @@
             <ul>
               <li><a href="./aboutus.html">about us</a></li>
               <li><a href="./contactus.html">contact us</a></li>
-              <!-- <li><a href="#">our services</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                            <li><a href="#">affiliate program</a></li> -->
             </ul>
           </div>
           <div class="footer-col">
             <h4>get help</h4>
             <ul>
               <li><a href="./index.html#faq-section">FAQ</a></li>
-              <!-- <li><a href="#">shipping</a></li>
-                            <li><a href="#">returns</a></li>
-                            <li><a href="#">order status</a></li>
-                            <li><a href="#">payment options</a></li> -->
             </ul>
           </div>
           <div class="footer-col">
@@ -872,7 +785,6 @@
               <a href="https://www.facebook.com/profile.php?id=61570026141018"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="https://www.instagram.com/shammys_cuisine"
                 ><i class="fab fa-instagram"></i
               ></a>
@@ -881,7 +793,7 @@
         </div>
       </div>
       <div class="footer-copywrite">
-        <p>&copy; 2024 ShammysCuisine. All Rights Reserved.</p>
+        <p>&copy; 2025 ShammysCuisine. All Rights Reserved.</p>
       </div>
     </footer>
 

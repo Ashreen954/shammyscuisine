@@ -33,6 +33,16 @@
   border-color: rgba(0, 0, 0, 0.1);
 }
 
+li.nav-item.dropdown.px-3,
+li.nav-item.dropdown.px-3 ul.dropdown-menu li {
+  list-style: none;
+}
+
+li.nav-item.dropdown.px-3 a.nav-link,
+li.nav-item.dropdown.px-3 ul.dropdown-menu a.dropdown-item {
+  font-size: 1.2rem; /* Adjust as needed */
+}
+
 .cart-icon i {
   font-size: 1.5rem;
   color: #ff9800;
@@ -52,6 +62,14 @@
 .cart-badge:hover {
   transform: scale(1.1);
 }
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+
+
 
 
 /* Adjust navbar layout and spacing for larger screens */
@@ -122,15 +140,7 @@
   }
 }
 
-li.nav-item.dropdown.px-3,
-li.nav-item.dropdown.px-3 ul.dropdown-menu li {
-  list-style: none;
-}
 
-li.nav-item.dropdown.px-3 a.nav-link,
-li.nav-item.dropdown.px-3 ul.dropdown-menu a.dropdown-item {
-  font-size: 1.2rem; /* Adjust as needed */
-}
 
 /* header content */
 .header {
@@ -427,7 +437,7 @@ details summary {
 }
 
 details p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #2c2a2a;
   padding: 8px;

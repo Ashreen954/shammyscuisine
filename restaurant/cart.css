@@ -14,7 +14,7 @@ body {
   }
   
   .navbar {
-    background-color: #ffff;
+    background-color: #ffffff;
   }
   
   .navbar .navbar-brand img {
@@ -39,20 +39,112 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
   
-  /* Translate buttons */
-.translate-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.translate-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #f9f9f9;
-}
+  li.nav-item.dropdown.px-3,
+  li.nav-item.dropdown.px-3 ul.dropdown-menu li {
+    list-style: none;
+  }
+  
+  li.nav-item.dropdown.px-3 a.nav-link,
+  li.nav-item.dropdown.px-3 ul.dropdown-menu a.dropdown-item {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+  
+  .cart-icon i {
+    font-size: 1.5rem;
+    color: #ff9800;
+    transition: transform 0.3s ease;
+  }
+  
+  .cart-icon:hover i {
+    transform: scale(1.1);
+  }
+  
+  .cart-badge {
+    background-color: #e91e63;
+    font-size: 0.1rem;
+    padding: 0.1rem;
+  }
+  
+  .cart-badge:hover {
+    transform: scale(1.1);
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  /* Adjust navbar layout and spacing for larger screens */
+  @media (min-width: 992px) {
+    .navbar .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .navbar-nav {
+      margin-right: auto; /* Ensure navigation is aligned left */
+    }
+  
+    .navbar-nav .nav-link {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .navbar-nav .nav-item {
+      display: inline-block;
+    }
+  
+    .navbar-toggler {
+      display: none; /* Hide toggler on larger screens */
+    }
+  
+    .cart-icon {
+      margin-left: 15px; /* Space between cart and language dropdown */
+    }
+  }
+  
+  /* For smaller screens, adjust the layout for better stacking */
+  @media (max-width: 991px) {
+    .navbar .container-fluid {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .navbar-nav {
+      margin-right: 0; /* No additional right margin */
+    }
+  
+    .navbar-toggler {
+      display: block; /* Show the toggler */
+    }
+  
+    .cart-icon {
+      margin-left: 10px; /* Adjust for smaller screens */
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 480px) {
+    .navbar .container-fluid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 10px;
+    }
+  
+    .navbar-toggler {
+      margin-right: 5px;
+    }
+  
+    .cart-icon {
+      margin-left: 0;
+    }
+  }
 
 .flag-icon {
   width: 24px;
