@@ -80,6 +80,8 @@ function checkAndDisplayEmptyCartMessage() {
     // Hide the cart table and total bill
     document.querySelector("table").style.display = "none";
     totalBillElement.style.display = "none";
+    document.getElementById("confirm-order").style.display = "none";
+
 
     // Show empty cart message
     cartItemsElement.innerHTML = `<tr><td colspan="6" class="text-center">Votre panier est vide</td></tr>
@@ -88,6 +90,8 @@ function checkAndDisplayEmptyCartMessage() {
     // Show the table and total bill again if there are items
     document.querySelector("table").style.display = "table";
     totalBillElement.style.display = "block";
+    document.getElementById("confirm-order").style.display = "inline-block";
+
   }
 }
 // Iterate through the itemsOrder array
