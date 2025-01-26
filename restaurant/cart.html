@@ -15,11 +15,12 @@
     />
     <!--icon-->
     <link rel="shortcut icon" href="./images/logo.png" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
+    <head>
+      <!-- Add this line in the <head> section to include Font Awesome icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    
+  
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
       rel="stylesheet"
@@ -30,9 +31,9 @@
     <!--responsive navbar-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./index.html">
           <img
-            src="./images/WhatsApp Image 2025-01-20 at 5.49.58 PM.jpeg"
+            src="./images/LOGO.png"
             alt="Logo"
             width="150px"
           />
@@ -89,7 +90,7 @@
             <li>
               <a
                 class="dropdown-item d-flex align-items-center"
-                href="./frenchindex.html"
+                href="./frenchcart.html"
               >
                 <img
                   src="./images/FRANCE_logo.png"
@@ -135,7 +136,6 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Image</th>
             <th>Item</th>
             <th>Quantity</th>
             <th>Price</th>
@@ -148,10 +148,13 @@
         </tbody>
       </table>
       <h3 id="total-bill">Total: €0.00</h3>
-      <button id="confirm-order" class="btn btn-primary">Save and Confirm Order</button>
-    </main>
+      <button id="confirm-order" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> Save and Confirm Order
+      </button>
+      </main>
+    
      <!--footer-->
-     <footer class="footer">
+    <footer class="footer">
       <div class="container-footer">
         <div class="row-footer">
           <div class="footer-col">
@@ -159,19 +162,12 @@
             <ul>
               <li><a href="./aboutus.html">about us</a></li>
               <li><a href="./contactus.html">contact us</a></li>
-              <!-- <li><a href="#">our services</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                            <li><a href="#">affiliate program</a></li> -->
             </ul>
           </div>
           <div class="footer-col">
             <h4>get help</h4>
             <ul>
               <li><a href="./index.html#faq-section">FAQ</a></li>
-              <!-- <li><a href="#">shipping</a></li>
-                            <li><a href="#">returns</a></li>
-                            <li><a href="#">order status</a></li>
-                            <li><a href="#">payment options</a></li> -->
             </ul>
           </div>
           <div class="footer-col">
@@ -180,7 +176,6 @@
               <a href="https://www.facebook.com/profile.php?id=61570026141018"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="https://www.instagram.com/shammys_cuisine"
                 ><i class="fab fa-instagram"></i
               ></a>
@@ -189,7 +184,7 @@
         </div>
       </div>
       <div class="footer-copywrite">
-        <p>&copy; 2024 ShammysCuisine. All Rights Reserved.</p>
+        <p>&copy; 2025 ShammysCuisine. All Rights Reserved.</p>
       </div>
     </footer>
 

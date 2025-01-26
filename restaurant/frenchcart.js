@@ -30,6 +30,7 @@ function updateCartCount() {
 }
 
 // Function to update total bill
+
 function updateTotalBill() {
   totalBill = 0;
   const rows = cartItemsElement.querySelectorAll("tr");
@@ -57,8 +58,8 @@ function updateTotalBill() {
 
   if (discount > 0) {
     totalMessage = `Total: <s>€${totalBill.toFixed(2)}</s><br>`;
-    discountMessage = `<p style="color: #ff4500; font-size: 0.6em;">Discount Applied: ${(discount * 100).toFixed(0)}%</p>`;
-  }
+    discountMessage = `<p style="color: #ff4500; font-size: 0.6em;">Réduction appliquée : ${(discount * 100).toFixed(0)}%</p>`;
+}
 
   // Combine the messages to display the information
   totalBillElement.innerHTML = `${totalMessage}${discountMessage}${finalTotalMessage}`;
@@ -70,26 +71,25 @@ function updateTotalBill() {
 
 // Get the items order array
 const itemsOrder = JSON.parse(localStorage.getItem("itemsOrder")) || [];
+
 function checkAndDisplayEmptyCartMessage() {
   if (itemsOrder.length === 0) {
-    cartHeading.textContent = "Your cart is empty";
+    cartHeading.textContent = "Votre panier est vide";
     cartHeading.style.textAlign = "center";
 
-    // Hide the cart table, total bill, and confirm order button
+    // Hide the cart table and total bill
     document.querySelector("table").style.display = "none";
     totalBillElement.style.display = "none";
-    document.getElementById("confirm-order").style.display = "none";
 
     // Show empty cart message
-    cartItemsElement.innerHTML = `<tr><td colspan="6" class="text-center">Your cart is empty</td></tr>`;
+    cartItemsElement.innerHTML = `<tr><td colspan="6" class="text-center">Votre panier est vide</td></tr>
+`;
   } else {
-    // Show the table, total bill, and confirm order button again if there are items
+    // Show the table and total bill again if there are items
     document.querySelector("table").style.display = "table";
     totalBillElement.style.display = "block";
-    document.getElementById("confirm-order").style.display = "inline-block";
   }
 }
-
 // Iterate through the itemsOrder array
 itemsOrder.forEach((key) => {
   const itemData = JSON.parse(localStorage.getItem(key));
@@ -97,27 +97,27 @@ itemsOrder.forEach((key) => {
     const row = document.createElement("tr");
     const itemTotal = itemData.quantity * itemData.price;
     const minOrder = itemData.minOrder || 1; // Default to 1 if not set
-
     row.innerHTML = `
            
-            <td>${key}</td>
-            <td>
-                <div class="quantity-container">
-                    <div>
-                        <button class="decrement btn btn-sm btn-danger">-</button>
-                        <span class="quantity">${itemData.quantity}</span>
-                        <button class="increment btn btn-sm btn-success">+</button>
-                    </div>
-                    <p class="min-order-message">Minimum order quantity is ${minOrder}</p>
-                </div>
-            </td>
-            <td>€${itemData.price}</td>
-            <td class="item-total">€${itemTotal.toFixed(2)}</td>
-          <td>
-    <a href="#" class="delete-item text-danger">
-        <i class="fas fa-trash-alt"></i>
-    </a>
+    <td>${key}</td>
+    <td>
+        <div class="quantity-container">
+            <div>
+                <button class="decrement btn btn-sm btn-danger">-</button>
+                <span class="quantity">${itemData.quantity}</span>
+                <button class="increment btn btn-sm btn-success">+</button>
+            </div>
+            <p class="min-order-message">La quantité minimale de commande est ${minOrder}</p>
+        </div>
+    </td>
+    <td>€${itemData.price}</td>
+    <td class="item-total">€${itemTotal.toFixed(2)}</td>
+  <td>
+<a href="#" class="delete-item text-danger">
+<i class="fas fa-trash-alt"></i>
+</a>
 </td>
+
 
         `;
     // Get the min order message and quantity elements
@@ -231,46 +231,44 @@ function generateOrderId() {
   return orderId;
 }
 
-// Function to send order details to WhatsApp
-// Function to send order details to WhatsApp
-// Function to send order details to WhatsApp
+// Fonction pour envoyer les détails de la commande sur WhatsApp
 function sendOrderDetailsToWhatsApp() {
-  // Generate a unique order ID
-  const orderId = generateOrderId();
-  console.log("Generated Order ID:", orderId);
-
-  const itemsOrder = JSON.parse(localStorage.getItem("itemsOrder"));
-  let orderSummary = `Hello! I would like to place an order. Here are the details (Order ID: ${orderId}):\n\n`;
-
-  let totalBill = 0;
-  let serialNumber = 1; // Start serial number from 1
-
-  itemsOrder.forEach((key) => {
-    const item = JSON.parse(localStorage.getItem(key));
-    const itemTotal = item.quantity * parseFloat(item.price);
-    
-    // Add serial number, item name, quantity, price, and total to the message
-    orderSummary += `${serialNumber}. *${key}*: Quantity: ${item.quantity}, Price: €${item.price}, Total: €${itemTotal.toFixed(2)}\n`;
-    
-    totalBill += itemTotal;
-    serialNumber++; // Increment serial number for next item
-  });
-
-  orderSummary += `\nTotal: €${totalBill.toFixed(2)}\n\nThank you for your attention to my order!`;
-
-  // Encode the message for WhatsApp
-  const message = encodeURIComponent(orderSummary);
-
-  // WhatsApp number (Replace with actual number)
-  const whatsappNumber = "+33755990317";
-
-  // Construct the WhatsApp URL with the encoded message
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-  // Open WhatsApp chat window with the order summary
-  window.open(whatsappURL, "_blank");
-}
-
+    // Générer un ID de commande unique
+    const orderId = generateOrderId();
+    console.log("ID de commande généré:", orderId);
+  
+    const itemsOrder = JSON.parse(localStorage.getItem("itemsOrder"));
+    let orderSummary = `Bonjour ! Je souhaite passer une commande. Voici les détails (ID de commande : ${orderId}) :\n\n`;
+  
+    let totalBill = 0;
+    let serialNumber = 1; // Commencer la numérotation à partir de 1
+  
+    itemsOrder.forEach((key) => {
+      const item = JSON.parse(localStorage.getItem(key));
+      const itemTotal = item.quantity * parseFloat(item.price);
+      
+      // Ajouter le numéro de série, le nom de l'article, la quantité, le prix et le total au message
+      orderSummary += `${serialNumber}. *${key}* : Quantité : ${item.quantity}, Prix : €${item.price}, Total : €${itemTotal.toFixed(2)}\n`;
+      
+      totalBill += itemTotal;
+      serialNumber++; // Incrémenter le numéro de série pour l'article suivant
+    });
+  
+    orderSummary += `\nTotal : €${totalBill.toFixed(2)}\n\nMerci pour l'attention portée à ma commande !`;
+  
+    // Encoder le message pour WhatsApp
+    const message = encodeURIComponent(orderSummary);
+  
+    // Numéro WhatsApp (Remplacez par le numéro réel)
+    const whatsappNumber = "+33755990317";
+  
+    // Construire l'URL WhatsApp avec le message encodé
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+  
+    // Ouvrir la fenêtre de chat WhatsApp avec le résumé de la commande
+    window.open(whatsappURL, "_blank");
+  }
+  
 
 
 // Add event listener to the button

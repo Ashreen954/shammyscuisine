@@ -1,16 +1,4 @@
 
-//   const scrollContainer = document.querySelector('.testimonials__grid');
-//   let scrollSpeed = 1; // Adjust the scroll speed
-  
-//   function scrollTestimonials() {
-//     scrollContainer.scrollLeft += scrollSpeed;
-//     if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.offsetWidth) {
-//       scrollContainer.scrollLeft = 0;
-//     }
-//   }
-  
-//   setInterval(scrollTestimonials, 20); // Adjust the interval for smoother scrolling
-
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector('.testimonials__track');
     const cards = document.querySelectorAll('.card-test');
@@ -74,54 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 minOrderMessage.style.display = "block"; // Show the message
             }
-        });
-        addToCartButton.addEventListener('click', () => {
-            if (quantity >= minOrder) {
-                const item = addToCartButton.dataset.item;
-                const price = addToCartButton.dataset.price;
-                const imageUrl = card.querySelector('.menu-image').src; // Fetch the image URL
-        
-                // Store item data including minOrder, quantity, price, and image URL in localStorage
-                const cartItem = { quantity, price, imageUrl, minOrder };
-                localStorage.setItem(item, JSON.stringify(cartItem));
-        
-                // Maintain order of items in a separate array
-                let itemsOrder = JSON.parse(localStorage.getItem("itemsOrder")) || [];
-                if (!itemsOrder.includes(item)) {
-                    itemsOrder.push(item);
-                }
-                localStorage.setItem("itemsOrder", JSON.stringify(itemsOrder));
-        
-                // Set modal content
-                document.getElementById('modal-item').textContent = `Item: ${item}`;
-                document.getElementById('modal-quantity').textContent = `Quantity: ${quantity}`;
-                document.getElementById('modal-price').textContent = `Price: €${(quantity * price).toFixed(2)}`;
-        
-                // Show the modal
-                const modal = document.getElementById('cart-modal');
-                modal.style.display = 'block';
-        
-                // Close modal logic
-                const closeModal = document.getElementById('close-modal');
-                closeModal.onclick = () => {
-                    modal.style.display = 'none';
-                };
-        
-                // Close modal when clicking outside of it
-                window.onclick = (event) => {
-                    if (event.target === modal) {
-                        modal.style.display = 'none';
-                    }
-                };
-        
-                // Update cart count and save it to localStorage
-                cartCount++; // Increment the cart count
-                cartBadge.textContent = cartCount; // Update the badge text
-                localStorage.setItem("cartCount", cartCount); // Save the updated cart count
-            } else {
-                alert(`Please order at least ${minOrder} items of ${addToCartButton.dataset.item}.`);
-            }
-        });
-        
+        }); 
     });
 });
